@@ -1,0 +1,228 @@
+body{
+    margin: 0;
+    padding: 0;
+    background-color: cornsilk;
+}
+.page{
+    display: flex;
+    flex-direction: column;
+}
+.header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding:1rem;
+    background-color:white;
+    color:#fff;
+}
+.header .logo{
+    width:100px; 
+    height: auto;
+}
+.header .navigation{
+    display: flex;
+    align-items: center;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+.header a{
+    text-decoration: none;
+    color:black;
+    padding:15px;
+    transition: color 0.3s ease;
+}
+.navigation a:hover{
+    background-color: rgb(237, 237, 242);
+    border-style: none;
+    border-radius: 5px;
+    text-decoration: underline;
+}
+@media only screen and (max-width: 768px) {
+    .header .navigation {
+      position: relative;
+    }
+    
+    .header .navigation a {
+      display: block;
+      padding: 0.5rem;
+      text-align: center;
+    }
+    
+    .header .logo{
+        width:auto;
+    }
+  }
+.shop{
+    background-color: orangered;
+    color: white;
+    border-style:none;
+    border-radius: 10px;
+    
+    padding: 10px;
+}
+
+.main{
+    display:grid;
+    grid-template-columns: 1fr auto 1fr;
+}
+.anim-container{
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    
+}
+.anim{
+    
+    background-image: linear-gradient(aqua,#ac3b61,#bab2b5,aqua,#123c69,aqua);
+    color: transparent;
+    -webkit-background-clip: text;
+    animation-name: myanim;
+    animation-duration: 6s;
+    animation-iteration-count: infinite;
+}
+@keyframes myanim{
+    from{
+        font-size: 0;
+    }
+    to{
+        font-size: 50px;
+    }
+}
+
+
+.center-container{
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    padding: 30px;
+    height: 100%;
+    width:300px;
+}
+.center{
+    background-color:bisque;
+    width: 100%;
+    height:auto;
+    padding: 20px;
+    border-radius: 10px;
+    margin-bottom:100px;
+}
+
+.center p{
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    font-family: "Dancing Script", cursive;
+    font-optical-sizing: auto;
+    font-style: normal;
+}
+input[type="text"],
+input[type="number"],
+select
+{
+    width:100%;
+    margin-top: 10px;
+    border-width: 1px;
+    border-radius: 10px;
+    padding: 10px;
+    box-sizing: border-box;
+}
+.btn-container{
+    text-align: center;
+    margin-top: 20px;
+}
+.btn{
+    width: 50%;
+    padding:10px;
+    border-radius: 10px;
+    background-color:orangered;
+    color: white;
+    border-style:none;
+    font-size: large;
+}
+.img{
+    display:flex ;
+    align-items: center;
+    justify-content: center;
+}
+
+.img img {
+    width: 100%;
+    max-width: 100%; 
+}
+
+@media only screen and (min-width: 768px) {
+    .img img {
+        width: 300px; 
+        max-width: none;
+    }
+}
+
+@media only screen and (min-width: 992px) {
+    .img img {
+        width: 400px; 
+        max-width: none;
+        
+    }
+}
+@media only screen and (min-width:300px) {
+    .img img{
+        width:300px;
+        max-width: none;
+    }
+    .shop{
+        width:130px;
+        height: 40px;
+    }
+    
+}
+
+
+@media only screen and (min-width: 1200px) {
+   
+    .img img {
+        width: 500px;
+        max-width: none;
+    }
+}
+
+.next{
+    margin-bottom: 20px;
+}
+.notes{
+    text-align: center;
+    font-family: "Butterfly Kids", cursive;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 20px;
+}
+.btn-container1{
+    display: grid;
+    justify-content: center;
+}
+.btn1{
+    background-color: orangered;
+    color: white;
+    border-style:none;
+    font-size: large;
+    border-radius: 5px;
+    width: 70px;
+    padding:5px;
+    height: auto;
+}
+
+.shop:hover,
+.btn:hover,
+.btn1:hover
+{
+    transform: translate(0,-10%);
+    color: aliceblue;
+    background-color: rgb(255, 4, 0);
+}
+
+input[type="text"]:hover,
+input[type="number"]:hover,
+select:hover{
+    transform: translate(0,-10%);
+
+}
